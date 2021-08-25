@@ -122,4 +122,18 @@ const COLOR_STATUS = {
 const FAKE_NAME = 'admin';
 const FAKE_PASSWORD = '123abc456';
 
-export { API_ROOT, EVENT_NAMES, STRUCTURE_TASK, FAKE_NAME, FAKE_PASSWORD, COLOR_STATUS };
+const FAKE_ACCOUNT = {
+  photoURL: '/static/avatars/avatar_default.jpg',
+  displayName: 'Nguyễn Hải Đăng',
+  email: 'hada.nguyen309@gmail.com'
+};
+
+export {
+  API_ROOT,
+  EVENT_NAMES,
+  STRUCTURE_TASK,
+  FAKE_NAME,
+  FAKE_PASSWORD,
+  FAKE_ACCOUNT,
+  COLOR_STATUS
+};

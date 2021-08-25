@@ -3,15 +3,16 @@ import { useRef, useState } from 'react';
 import homeFill from '@iconify/icons-eva/home-fill';
 import personFill from '@iconify/icons-eva/person-fill';
 import settings2Fill from '@iconify/icons-eva/settings-2-fill';
-import { Link as RouterLink, Navigate } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 // material
 import { alpha } from '@material-ui/core/styles';
 import { Button, Box, Divider, MenuItem, Typography, Avatar, IconButton } from '@material-ui/core';
 // components
 import { useNavigate } from 'react-router';
 import MenuPopover from '../../components/MenuPopover';
+
+import { FAKE_ACCOUNT } from '../../utils/constants';
 //
-import account from '../../_mocks_/account';
 
 // ----------------------------------------------------------------------
 
@@ -74,7 +75,7 @@ export default function AccountPopover() {
           })
         }}
       >
-        <Avatar src={account.photoURL} alt="photoURL" />
+        <Avatar src={FAKE_ACCOUNT.photoURL} alt="photoURL" />
       </IconButton>
 
       <MenuPopover
@@ -85,10 +86,10 @@ export default function AccountPopover() {
       >
         <Box sx={{ my: 1.5, px: 2.5 }}>
           <Typography variant="subtitle1" noWrap>
-            {account.displayName}
+            {FAKE_ACCOUNT.displayName}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {account.email}
+            {FAKE_ACCOUNT.email}
           </Typography>
         </Box>
 

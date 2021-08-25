@@ -5,13 +5,13 @@ import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { styled } from '@material-ui/core/styles';
 import { Box, Link, Drawer, Typography, Avatar } from '@material-ui/core';
 // components
+import { FAKE_ACCOUNT } from '../../utils/constants';
 import Logo from '../../components/Logo';
 import Scrollbar from '../../components/Scrollbar';
 import NavSection from '../../components/NavSection';
 import { MHidden } from '../../components/@material-extend';
 //
 import sidebarConfig from './SidebarConfig';
-import account from '../../_mocks_/account';
 
 // ----------------------------------------------------------------------
 
@@ -42,6 +42,12 @@ DashboardSidebar.propTypes = {
 export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
   const { pathname } = useLocation();
 
+  const account = {
+    photoURL: '',
+    displayName: '',
+    email: ''
+  };
+
   useEffect(() => {
     if (isOpenSidebar) {
       onCloseSidebar();
@@ -65,13 +71,13 @@ export default function DashboardSidebar({ isOpenSidebar, onCloseSidebar }) {
       <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none" component={RouterLink} to="#">
           <AccountStyle>
-            <Avatar src={account.photoURL} alt="photoURL" />
+            <Avatar src={FAKE_ACCOUNT.photoURL} alt="photoURL" />
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                {account.displayName}
+                {FAKE_ACCOUNT.displayName}
               </Typography>
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {account.role}
+                {FAKE_ACCOUNT.role}
               </Typography>
             </Box>
           </AccountStyle>

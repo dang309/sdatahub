@@ -14,31 +14,6 @@ const sidebarConfig = [
     path: '/dashboard/task-monitoring',
     icon: <AssignmentIcon width={22} height={22} />
   }
-  // {
-  //   title: 'product',
-  //   path: '/dashboard/products',
-  //   icon: getIcon(shoppingBagFill)
-  // },
-  // {
-  //   title: 'blog',
-  //   path: '/dashboard/blog',
-  //   icon: getIcon(fileTextFill)
-  // },
-  // {
-  //   title: 'login',
-  //   path: '/login',
-  //   icon: getIcon(lockFill)
-  // },
-  // {
-  //   title: 'register',
-  //   path: '/register',
-  //   icon: getIcon(personAddFill)
-  // },
-  // {
-  //   title: 'Not found',
-  //   path: '/404',
-  //   icon: getIcon(alertTriangleFill)
-  // }
 ];
 
 export default sidebarConfig;
